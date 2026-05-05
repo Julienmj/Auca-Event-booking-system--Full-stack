@@ -8,7 +8,7 @@ A full-stack web application for AUCA students to browse and register for campus
 
 ```
 ├── backend/       # Spring Boot REST API (Java 23)
-└── frontend/      # Coming soon
+└── frontend/      # Vue 3 + Vite + Tailwind + Axios
 ```
 
 ---
@@ -107,7 +107,53 @@ backend/src/main/java/eventbooking/
 
 ---
 
+## Frontend
+
+### Tech Stack
+- Vue 3
+- Vite
+- Tailwind CSS
+- Axios
+
+### Setup
+
+1. Install dependencies:
+   ```bash
+   cd frontend
+   npm install
+   ```
+
+2. Run the dev server:
+   ```bash
+   npm run dev
+   ```
+
+3. App available at:
+   ```
+   http://localhost:5173
+   ```
+
+> Make sure the backend is running on port 8080 before starting the frontend.
+
+### Folder Structure
+
+```
+frontend/src/
+├── main.js
+├── axios.js              ← Axios instance (baseURL: localhost:8080/api)
+├── App.vue               ← Root component, navbar, modal state
+├── assets/
+│   └── main.css          ← Tailwind directives
+└── components/
+    ├── EventList.vue     ← Fetches and displays all events as cards
+    ├── EventCard.vue     ← Single event card with seats badge
+    ├── RegisterForm.vue  ← Registration modal form
+    └── AddEventForm.vue  ← Add new event modal form
+```
+
+---
+
 ## Progress
 
 - [x] Backend — Spring Boot REST API
-- [ ] Frontend — Coming soon
+- [x] Frontend — Vue 3 + Tailwind + Axios
